@@ -49,8 +49,6 @@ void cyk(vector < string > pr, int n)
 						tmp2.append(*it);
 					}
 
-					//printf("\n");
-								
 					for (int p = 0; p < tmp1.length(); p++) {
 						for (int q = 0;q < tmp2.length();q++) {
 							if (tmp1 == "$" || tmp2 == "$") {
@@ -71,37 +69,6 @@ void cyk(vector < string > pr, int n)
 							}
 						}
 					}
-
-					/*for (int p = 0; p < tmp1.length(); p++) {
-						string tmp = "";
-						tmp.push_back(tmp1.at(p));
-						for (int q = 0; q < tmp2.length(); q++) {
-							if (tmp1 == "$" || tmp2 == "$") {
-
-							} else {
-								tmp.push_back(tmp2.at(q));
-								for (vector < string > :: iterator it = pr.begin();it != pr.end();it++) {
-									string xx = (*it).substr(2);
-									if (xx == tmp) {
-										string yy = "";
-										yy = (*it).at(0);
-										element.insert(yy);
-									}
-								}
-								tmp.erase(tmp.size() - 1, 1);
-								cout << tmp << " ";
-							}
-						}
-						cout << endl;
-						tmp.clear();
-					}
-
-					if (element.empty()) {
-						element.insert("$");
-					}
-
-					column.push_back(element);
-					//cout << tmp1 << "   " << tmp2 << endl;*/
 				}
 
 				if (element.empty()) {
@@ -113,14 +80,6 @@ void cyk(vector < string > pr, int n)
 			res.push_back(column);
 		}
 	}
-
-	/*for (int i = 0;i < 1;i++) {
-		for (int j = 0;j < 1;j++) {
-			for (set < string > :: iterator it2 = res.at(i).at(j).begin();it2 != res.at(i).at(j).end();it2++) {
-				cout << *it2;
-			}
-		}
-	}*/
 
 	for (vector < vector < set < string > > > :: iterator it = res.begin();it != res.end();it++) {
 		for (vector < set < string > > :: iterator it1 = (*it).begin();it1 != (*it).end();it1++) {
